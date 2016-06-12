@@ -79,19 +79,6 @@ No element is first.
 Hence all sequences which result from a rotation of the sequence are equivalent.
 The number of such permutation is thus reduced by the factor of $n$ giving ${(n-1)!}$
 
-\subsection{Permutations with replacement}
-
-\foreignlanguage{polish}{\pl wariacje z powtórzeniami.}
-
-A sequence of length $k$ in which elements are drawn from a set with $n$ elements with replacement.
-The number of such permutations is:
-%
-\begin{equation}
-    n^k
-\end{equation}
-
-\underline{Justification}: each element of the sequence is independent: $n\times n\times \dotsb$
-
 \subsection{Partial permutations}
 
 \foreignlanguage{polish}{\pl wariacje bez powtórzeń.}
@@ -105,6 +92,19 @@ The number of all possible $k$\nobreakdash-\hspace{0pt}permutations of $n$ is:
 
 \underline{Justification}: The multiplication ${n\times(n-1)\times(n-2)\times \dotsb}$  finishes earlier, namely after $k$ elements, the last element being $(n-k+1)$.
 This is equivalent to the formula above.
+
+\subsection{Permutations with replacement}
+
+\foreignlanguage{polish}{\pl wariacje z powtórzeniami.}
+
+A sequence of length $k$ in which elements are drawn from a set with $n$ elements with replacement.
+The number of such permutations is:
+%
+\begin{equation}
+    n^k
+\end{equation}
+
+\underline{Justification}: each element of the sequence is independent: $n\times n\times \dotsb$
 
 \subsection{Multiset permutations}
 \label{mulper}
