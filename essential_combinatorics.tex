@@ -67,7 +67,8 @@ The number of all possible permutations of a set with $n$ elements is:
     ^nP = n!
 \end{equation}
 
-\underline{Justification}: subsequent positions have their choices limited by the elements already chosen:
+\underline{Justification}:
+Subsequent positions have their choices limited by the elements already chosen:
 %
 \begin{equation*}
     n\times(n-1)\times(n-2)\times \dotsb \times 1
@@ -90,7 +91,8 @@ The number of all possible $k$\nobreakdash-\hspace{0pt}permutations of $n$ is:
     ^nP_k = \frac{n!}{(n-k)!}
 \end{equation}
 
-\underline{Justification}: The multiplication ${n\times(n-1)\times(n-2)\times \dotsb}$ ends earlier, namely after $k$ elements, the last element being $(n-k+1)$.
+\underline{Justification}:
+The multiplication ${n\times(n-1)\times(n-2)\times \dotsb}$ ends earlier, namely after $k$ elements, the last element being $(n-k+1)$.
 
 % TODO: How many partial permutations are there in total?
 % This information would be analogous to Eq.~\ref{eq:all_comb} for combinations.
@@ -107,7 +109,8 @@ The number of such permutations is:
     n^k
 \end{equation}
 
-\underline{Justification}: each element of the sequence is independent: $n\times n\times \dotsb$
+\underline{Justification}:
+Each element of the sequence is independent: $n\times n\times \dotsb$
 
 \subsection{Multiset permutations}
 \label{mulper}
@@ -122,7 +125,8 @@ The total number of such permutations is given by the multinomial coefficient (\
     \binom{n}{m_1, m_2, \dotsc} = \frac{n!}{m_1!m_2!\dotsm}
 \end{equation}
 
-\underline{Justification}: The number is the same as for a permutation but reduced by the number of permutations of each group of indistinguishable elements.
+\underline{Justification}:
+The number is the same as for a permutation but reduced by the number of permutations of each group of indistinguishable elements.
 
 % TODO: Partial multiset permutations should also be a thing but a quick search didn't show anything.
 % Maybe try to derive an equation.
@@ -142,7 +146,8 @@ The number of ways in which $k$\nobreakdash-\hspace{0pt}element subsets can be c
 %
 read as `$n$ choose $k$'. Note that binomial coefficients can be found in the Pascal's triangle.
 
-\underline{Justification}: partial permutations in which the order of the sequence is disregarded and hence their number is reduced by the number of permutations of this sequence, $k!$:
+\underline{Justification}:
+Partial permutations in which the order of the sequence is disregarded and hence their number is reduced by the number of permutations of this sequence, $k!$:
 %
 \begin{equation}
         ^nC_k = \frac{^nP_k}{^kP}
