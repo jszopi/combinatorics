@@ -10,6 +10,8 @@
 \usepackage[utf8]{inputenc}
 \pagestyle{plain}
 
+\usepackage[super,comma]{natbib}
+
 \usepackage[nodayofweek]{datetime}
 \newdateformat{frontdate}{\THEDAY~\shortmonthname[\THEMONTH]~\THEYEAR}
 
@@ -140,7 +142,7 @@ Using the binomial expansion (Eq.~\ref{eq:binexp}) for $x=y=1$ gives $2^k$.
 
 \subsection{Combinations with repetition}
 
-Also called $k$\nobreakdash-\hspace{0pt}multicombination or multisubset of size $k$, $k$\nobreakdash-\hspace{0pt}combination with repetitions can be best understood using the ice cream scoops analogy.\hyperref[itm:mathsisfun]{[\ref*{itm:mathsisfun}]}
+Also called $k$\nobreakdash-\hspace{0pt}multicombination or multisubset of size $k$, $k$\nobreakdash-\hspace{0pt}combination with repetitions can be best understood using the ice cream scoops analogy.\cite{mathsisfun}
 Imagine ice cream boxes with different flavours.
 A robotic arm moves along the boxes and over each box it can perform one of two actions: scoop or move along (shift).
 Multiple scoops as well as multiple shifts are allowed.
@@ -165,18 +167,26 @@ and read as `$n$ multichoose $k$'. Using the symmetry relation (Eq.~\ref{eq:symr
     \left(\!\!\!\binom{n}{k}\!\!\!\right) = \binom{n-1+l}{k} = \binom{n-1+k}{n-1+k-k} = \binom{n-1+k}{n-1} = \left(\!\!\!\binom{k+1}{n-1}\!\!\!\right)
 \end{equation}
 
-\section*{Bibliography}
+\begin{thebibliography}{9}
 
-\begin{enumerate}
-    \item{Wikipedia entries on \href{http://en.wikipedia.org/wiki/Permutation}{Permutation} and \href{http://en.wikipedia.org/wiki/Combination}{Combination}}
-    \item{\textbf{PL}: \url{http://matematyka.pisz.pl/strona/3425.html}\\i \url{http://www.math.edu.pl/kombinatoryka}}
-    \item{%
-        \label{itm:mathsisfun}
-        % Manually breaking url: http://tex.stackexchange.com/a/78102/64793
+    \bibitem{wiki}
+    Wikipedia entries on \href{http://en.wikipedia.org/wiki/Permutation}{Permutation}
+    and
+    \href{http://en.wikipedia.org/wiki/Combination}{Combination}
+
+    \bibitem{pl}
+    \textbf{PL}:
+    \url{http://matematyka.pisz.pl/strona/3425.html} \\
+    i \url{http://www.math.edu.pl/kombinatoryka}
+
+    \bibitem{mathsisfun}
+        % Manually breaking url
+	% http://tex.stackexchange.com/a/78102/64793
         \href{http://www.mathsisfun.com/combinatorics/combinations-permutations.html}{\nolinkurl{http://www.mathsisfun.com/combinatorics/}}\\
-        \href{http://www.mathsisfun.com/combinatorics/combinations-permutations.html}{\nolinkurl{combinations-permutations.html}}
-    }
-    \item{K.F. Riley, M.P. Hobson, S.J. Bence, \textit{Mathematical Methods for Physics and Engineering. A Comprehensive Guide}, 3rd edition, Cambridge University Press, 2006, p. 1133-9.}
-\end{enumerate}
+	\href{http://www.mathsisfun.com/combinatorics/combinations-permutations.html}{\nolinkurl{combinations-permutations.html}}
+
+    \bibitem{riley} K.F. Riley, M.P. Hobson, S.J. Bence, \textit{Mathematical Methods for Physics and Engineering. A Comprehensive Guide}, 3rd edition, Cambridge University Press, 2006, p. 1133-9.
+
+\end{thebibliography}
 
 \end{document}
