@@ -92,6 +92,10 @@ The number of all possible $k$\nobreakdash-\hspace{0pt}permutations of $n$ is:
 
 \underline{Justification}: The multiplication ${n\times(n-1)\times(n-2)\times \dotsb}$ ends earlier, namely after $k$ elements, the last element being $(n-k+1)$.
 
+% TODO: How many partial permutations are there in total?
+% This information would be analogous to Eq.~\ref{eq:all_comb} for combinations.
+% \sum_{i=0}^{n} ^nP_i
+
 \subsection{Permutations with replacement}
 
 \foreignlanguage{polish}{\pl wariacje z powtórzeniami.}
@@ -119,6 +123,9 @@ The total number of such permutations is given by the multinomial coefficient (\
 \end{equation}
 
 \underline{Justification}: just like a permutation but as certain elements are indistinguishable, the number is reduced by the number of permutations of their sequences if these elements were distinguishable.
+
+% TODO: Partial multiset permutations should also be a thing but a quick search didn't show anything.
+% Maybe try to derive an equation.
 
 \section{Combinations}
 
@@ -151,6 +158,7 @@ Symmetry relationship:
 The number of all combinations which can be formed from a set with $n$ elements:
 %
 \begin{equation}
+    \label{eq:all_comb}
     \binom{n}{0} + \binom{n}{1} + \dotsb + \binom{n}{n}= \sum_{k=0}^{k} \binom{n}{k}
 \end{equation}
 %
