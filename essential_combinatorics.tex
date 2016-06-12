@@ -92,7 +92,7 @@ This is equivalent to the formula above.
 
 Permutation of a multiset (a set in which certain elements are repeated and have multiplicities $m_1, m_2, \dotsc$).
 An example of such a permutation is an anagram of a word in which certain letters are repeated.
-The total number of such permutations is given by the multinomial coefficient (\cf binomial coefficient in \hyperref[combinations]{section \ref*{combinations}})
+The total number of such permutations is given by the multinomial coefficient (\cf binomial coefficient in Section~\ref{combinations})
 \begin{equation}
     \binom{n}{m_1, m_2, \dotsc} = \frac{n!}{m_1!m_2!\dotsm}
 \end{equation}
@@ -126,7 +126,7 @@ The number of all combinations which can be formed from a set with $n$ elements:
 \begin{equation}
     \binom{n}{0} + \binom{n}{1} + \dotsb + \binom{n}{n}= \sum_{k=0}^{k} \binom{n}{k}
 \end{equation}
-Using the binomial expansion (\hyperref[eq:binexp]{\ref*{eq:binexp}}) for $x=y=1$ gives $2^k$.
+Using the binomial expansion (Eq.~\ref{eq:binexp}) for $x=y=1$ gives $2^k$.
 
 \subsubsection{Aside: binomial expansion}
 
@@ -147,7 +147,7 @@ Multiple scoops as well as multiple shifts are allowed.
 The sequence of actions can be noted down using symbols \eg arrows and circles.
 The total number of scoops is given by $k$, while the total number of shifts must equal the number of flavours ($n$) reduced by 1.
 
-The number of possible combinations equals the number of multiset permutations (\hyperref[mulper]{section \ref*{mulper}}) of the symbolic notation.
+The number of possible combinations equals the number of multiset permutations (Section~\ref{mulper}) of the symbolic notation.
 The total length of the notation equals $n-1+k$.
 Scoops appear $k$ times and shifts $n-1$ times.
 The formula for the number of such multiset permutations can be rearranged to a binomial coefficient, namely `$n-1+k$ choose $k$':
@@ -158,7 +158,9 @@ which is sometimes denoted as:
 \begin{equation*}
     \left(\!\!\!\binom{n}{k}\!\!\!\right)
 \end{equation*}
-and read as `$n$ multichoose $k$'. Using the symmetry relation (\hyperref[eq:symrel]{\ref*{eq:symrel}}) for binomial coefficient it can be shown that:
+%
+and read as `$n$ multichoose $k$'. Using the symmetry relation (Eq.~\ref{eq:symrel}) for binomial coefficient it can be shown that:
+%
 \begin{equation}
     \left(\!\!\!\binom{n}{k}\!\!\!\right) = \binom{n-1+l}{k} = \binom{n-1+k}{n-1+k-k} = \binom{n-1+k}{n-1} = \left(\!\!\!\binom{k+1}{n-1}\!\!\!\right)
 \end{equation}
