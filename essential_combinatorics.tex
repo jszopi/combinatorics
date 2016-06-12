@@ -10,6 +10,19 @@
 \usepackage[utf8]{inputenc}
 \pagestyle{plain}
 
+\usepackage[nodayofweek]{datetime}
+\newdateformat{frontdate}{\THEDAY~\shortmonthname[\THEMONTH]~\THEYEAR}
+
+% Abbreviations
+% http://tex.stackexchange.com/a/15017
+\usepackage{xspace}
+\makeatletter
+\newcommand*{\etc}{etc\@ifnextchar{.}{}{.\@\xspace}}
+\newcommand*{\ie}{i.e\@ifnextchar{.}{}{.\@\xspace}}
+\newcommand*{\eg}{e.g\@ifnextchar{.}{}{.\@\xspace}}
+\newcommand*{\cf}{c.f\@ifnextchar{.}{}{.\@\xspace}}
+\makeatother
+
 % do not indent new paragraphs
 \setlength{\parindent}{0pt}
 % vertical space between paragraphs instead
@@ -19,7 +32,7 @@
 
 \title{Essential combinatorics}
 \author{Jan Szopinski}
-\date{12 Nov 2014}
+\date{\frontdate\today}
 \maketitle
 
 \section{Permutations}
@@ -79,7 +92,7 @@ This is equivalent to the formula above.
 
 Permutation of a multiset (a set in which certain elements are repeated and have multiplicities $m_1, m_2, \dotsc$).
 An example of such a permutation is an anagram of a word in which certain letters are repeated.
-The total number of such permutations is given by the multinomial coefficient (c.f. binomial coefficient in \hyperref[combinations]{section \ref*{combinations}})
+The total number of such permutations is given by the multinomial coefficient (\cf binomial coefficient in \hyperref[combinations]{section \ref*{combinations}})
 \begin{equation}
     \binom{n}{m_1, m_2, \dotsc} = \frac{n!}{m_1!m_2!\dotsm}
 \end{equation}
@@ -131,7 +144,7 @@ Also called $k$\nobreakdash-\hspace{0pt}multicombination or multisubset of size 
 Imagine ice cream boxes with different flavours.
 A robotic arm moves along the boxes and over each box it can perform one of two actions: scoop or move along (shift).
 Multiple scoops as well as multiple shifts are allowed.
-The sequence of actions can be noted down using symbols e.g. arrows and circles.
+The sequence of actions can be noted down using symbols \eg arrows and circles.
 The total number of scoops is given by $k$, while the total number of shifts must equal the number of flavours ($n$) reduced by 1.
 
 The number of possible combinations equals the number of multiset permutations (\hyperref[mulper]{section \ref*{mulper}}) of the symbolic notation.
