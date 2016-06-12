@@ -1,10 +1,10 @@
 \documentclass{article}
 
 \usepackage{fancyhdr, lastpage, amsmath, hyperref}
-\fancypagestyle{plain}{
-  \fancyhf{}
-  \renewcommand{\headrulewidth}{0pt}
-  \cfoot{Page \thepage~of \pageref{LastPage}}
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \cfoot{Page \thepage~of \pageref{LastPage}}
 }
 \usepackage{polski}
 \usepackage[utf8]{inputenc}
@@ -36,11 +36,11 @@ Wariacje przekształcają zbiór lub multizbiór na krótszy ciąg $k$\nobreakda
 A permutation maps all members of a set onto a sequence (no repetitions result).
 The number of all possible permutations of a set with $n$ elements is:
 \begin{equation}
-  ^nP = n!
+    ^nP = n!
 \end{equation}
 \underline{Justification}: subsequent positions have their choices limited by the elements already chosen:
 \begin{equation*}
-  n\times(n-1)\times(n-2)\times \dotsb \times 1
+    n\times(n-1)\times(n-2)\times \dotsb \times 1
 \end{equation*}
 
 \subsubsection{Circular permutations}
@@ -56,7 +56,7 @@ The number of such permutation is thus reduced by the factor of $n$ giving ${(n-
 A sequence of length $k$ in which elements are drawn from a set with $n$ elements with replacement.
 The number of such permutations is:
 \begin{equation}
-  n^k
+    n^k
 \end{equation}
 \underline{Justification}: each element of the sequence is independent: $n\times n\times \dotsb$
 
@@ -67,7 +67,7 @@ The number of such permutations is:
 A partial permutation (sometimes called variation) forms a shorter sequence of length $k$. 
 The number of all possible $k$\nobreakdash-\hspace{0pt}permutations of $n$ is:
 \begin{equation}
-  ^nP_k = \frac{n!}{(n-k)!}
+    ^nP_k = \frac{n!}{(n-k)!}
 \end{equation}
 \underline{Justification}: The multiplication ${n\times(n-1)\times(n-2)\times \dotsb}$  finishes earlier, namely after $k$ elements, the last element being $(n-k+1)$.
 This is equivalent to the formula above.
@@ -81,7 +81,7 @@ Permutation of a multiset (a set in which certain elements are repeated and have
 An example of such a permutation is an anagram of a word in which certain letters are repeated.
 The total number of such permutations is given by the multinomial coefficient (c.f. binomial coefficient in \hyperref[combinations]{section \ref*{combinations}})
 \begin{equation}
-  \binom{n}{m_1, m_2, \dotsc} = \frac{n!}{m_1!m_2!\dotsm}
+    \binom{n}{m_1, m_2, \dotsc} = \frac{n!}{m_1!m_2!\dotsm}
 \end{equation}
 \underline{Justification}: just like a permutation but as certain elements are indistinguishable, the number is reduced by the number of permutations of their sequences if these elements were distinguishable.
 
@@ -94,35 +94,35 @@ Order is not relevant. Combinations map a set or multiset onto its subset or mul
 
 The number of ways in which $k$\nobreakdash-\hspace{0pt}element subsets can be chosen from an $n$\nobreakdash-\hspace{0pt}element set is given by the binomial coefficient:
 \begin{equation}
-  ^nC_k = \binom{n}{k} = \frac{n!}{k!(n-k)!}
+    ^nC_k = \binom{n}{k} = \frac{n!}{k!(n-k)!}
 \end{equation}
 read as `$n$ choose $k$'. Note that binomial coefficients can be found in the Pascal's triangle.
 
 \underline{Justification}: partial permutations in which the order of the sequence is disregarded and hence their number is reduced by the number of permutations of this sequence, $k!$:
 \begin{equation}
-    ^nC_k = \frac{^nP_k}{^kP}
+        ^nC_k = \frac{^nP_k}{^kP}
 \end{equation}
 
 Symmetry relationship:
 \begin{equation}
-  \label{eq:symrel}
-  \binom{n}{k} = \binom{n}{n-k}, \qquad 0 \le k \le n 
+    \label{eq:symrel}
+    \binom{n}{k} = \binom{n}{n-k}, \qquad 0 \le k \le n 
 \end{equation}
 
 The number of all combinations which can be formed from a set with $n$ elements:
 \begin{equation}
-  \binom{n}{0} + \binom{n}{1} + \dotsb + \binom{n}{n}= \sum_{k=0}^{k} \binom{n}{k} 
+    \binom{n}{0} + \binom{n}{1} + \dotsb + \binom{n}{n}= \sum_{k=0}^{k} \binom{n}{k} 
 \end{equation}
 Using the binomial expansion (\hyperref[eq:binexp]{\ref*{eq:binexp}}) for $x=y=1$ gives $2^k$.
 
 \subsubsection{Aside: binomial expansion}
 
 \begin{equation}
-  \label{eq:binexp}
-  \begin{split}
-      (x+y)^n & = \binom{n}{0} x^n y^0 + \binom{n}{1} x^{n-1} y^1 + \dotsb + \binom{n}{n-1} x^1 y^{n-1} + \binom{n}{n} x^0 y^n \\
-            & = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k
-  \end{split}
+    \label{eq:binexp}
+    \begin{split}
+        (x+y)^n & = \binom{n}{0} x^n y^0 + \binom{n}{1} x^{n-1} y^1 + \dotsb + \binom{n}{n-1} x^1 y^{n-1} + \binom{n}{n} x^0 y^n \\
+                & = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k
+    \end{split}
 \end{equation}
 
 \subsection{Combinations with repetition}
@@ -139,28 +139,29 @@ The total length of the notation equals $n-1+k$.
 Scoops appear $k$ times and shifts $n-1$ times.
 The formula for the number of such multiset permutations can be rearranged to a binomial coefficient, namely `$n-1+k$ choose $k$':
 \begin{equation}
-  \frac{(k+n-1)!}{(n-1)!k!} = \frac{(k+n-1)!}{(k+n-1-k)!k!} = \binom{n-1+k}{k},
+    \frac{(k+n-1)!}{(n-1)!k!} = \frac{(k+n-1)!}{(k+n-1-k)!k!} = \binom{n-1+k}{k},
 \end{equation}
 which is sometimes denoted as:
 \begin{equation*}
-  \left(\!\!\!\binom{n}{k}\!\!\!\right)
+    \left(\!\!\!\binom{n}{k}\!\!\!\right)
 \end{equation*}
 and read as `$n$ multichoose $k$'. Using the symmetry relation (\hyperref[eq:symrel]{\ref*{eq:symrel}}) for binomial coefficient it can be shown that:
 \begin{equation}
-  \left(\!\!\!\binom{n}{k}\!\!\!\right) = \binom{n-1+l}{k} = \binom{n-1+k}{n-1+k-k} = \binom{n-1+k}{n-1} = \left(\!\!\!\binom{k+1}{n-1}\!\!\!\right)
+    \left(\!\!\!\binom{n}{k}\!\!\!\right) = \binom{n-1+l}{k} = \binom{n-1+k}{n-1+k-k} = \binom{n-1+k}{n-1} = \left(\!\!\!\binom{k+1}{n-1}\!\!\!\right)
 \end{equation}
 
 \section*{Bibliography}
 
 \begin{enumerate}
-  \item{Wikipedia entries on \href{http://en.wikipedia.org/wiki/Permutation}{Permutation} and \href{http://en.wikipedia.org/wiki/Combination}{Combination}}
-  \item{\textbf{PL}: \url{http://matematyka.pisz.pl/strona/3425.html}\\i \url{http://www.math.edu.pl/kombinatoryka}}
-  \item{\label{itm:mathsisfun}
-    % Manually breaking url: http://tex.stackexchange.com/a/78102/64793
-    \href{http://www.mathsisfun.com/combinatorics/combinations-permutations.html}{\nolinkurl{http://www.mathsisfun.com/combinatorics/}}\\
-    \href{http://www.mathsisfun.com/combinatorics/combinations-permutations.html}{\nolinkurl{combinations-permutations.html}}
-  }
-  \item{K.F. Riley, M.P. Hobson, S.J. Bence, \textit{Mathematical Methods for Physics and Engineering. A Comprehensive Guide}, 3rd edition, Cambridge University Press, 2006, p. 1133-9.}
+    \item{Wikipedia entries on \href{http://en.wikipedia.org/wiki/Permutation}{Permutation} and \href{http://en.wikipedia.org/wiki/Combination}{Combination}}
+    \item{\textbf{PL}: \url{http://matematyka.pisz.pl/strona/3425.html}\\i \url{http://www.math.edu.pl/kombinatoryka}}
+    \item{%
+        \label{itm:mathsisfun}
+        % Manually breaking url: http://tex.stackexchange.com/a/78102/64793
+        \href{http://www.mathsisfun.com/combinatorics/combinations-permutations.html}{\nolinkurl{http://www.mathsisfun.com/combinatorics/}}\\
+        \href{http://www.mathsisfun.com/combinatorics/combinations-permutations.html}{\nolinkurl{combinations-permutations.html}}
+    }
+    \item{K.F. Riley, M.P. Hobson, S.J. Bence, \textit{Mathematical Methods for Physics and Engineering. A Comprehensive Guide}, 3rd edition, Cambridge University Press, 2006, p. 1133-9.}
 \end{enumerate}
 
 \end{document}
