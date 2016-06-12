@@ -58,10 +58,13 @@ Order is relevant. A permutation maps a set or a multiset onto a sequence.
 
 A permutation maps all members of a set onto a sequence (no repetitions result).
 The number of all possible permutations of a set with $n$ elements is:
+%
 \begin{equation}
     ^nP = n!
 \end{equation}
+
 \underline{Justification}: subsequent positions have their choices limited by the elements already chosen:
+%
 \begin{equation*}
     n\times(n-1)\times(n-2)\times \dotsb \times 1
 \end{equation*}
@@ -78,9 +81,11 @@ The number of such permutation is thus reduced by the factor of $n$ giving ${(n-
 
 A sequence of length $k$ in which elements are drawn from a set with $n$ elements with replacement.
 The number of such permutations is:
+%
 \begin{equation}
     n^k
 \end{equation}
+
 \underline{Justification}: each element of the sequence is independent: $n\times n\times \dotsb$
 
 \subsection{Partial permutations}
@@ -89,9 +94,11 @@ The number of such permutations is:
 
 A partial permutation (sometimes called variation) forms a shorter sequence of length $k$. 
 The number of all possible $k$\nobreakdash-\hspace{0pt}permutations of $n$ is:
+%
 \begin{equation}
     ^nP_k = \frac{n!}{(n-k)!}
 \end{equation}
+
 \underline{Justification}: The multiplication ${n\times(n-1)\times(n-2)\times \dotsb}$  finishes earlier, namely after $k$ elements, the last element being $(n-k+1)$.
 This is equivalent to the formula above.
 
@@ -103,9 +110,11 @@ This is equivalent to the formula above.
 Permutation of a multiset (a set in which certain elements are repeated and have multiplicities $m_1, m_2, \dotsc$).
 An example of such a permutation is an anagram of a word in which certain letters are repeated.
 The total number of such permutations is given by the multinomial coefficient (\cf binomial coefficient in Section~\ref{combinations})
+%
 \begin{equation}
     \binom{n}{m_1, m_2, \dotsc} = \frac{n!}{m_1!m_2!\dotsm}
 \end{equation}
+
 \underline{Justification}: just like a permutation but as certain elements are indistinguishable, the number is reduced by the number of permutations of their sequences if these elements were distinguishable.
 
 \section{Combinations}
@@ -116,27 +125,33 @@ Order is not relevant. Combinations map a set or multiset onto its subset or mul
 \label{combinations}
 
 The number of ways in which $k$\nobreakdash-\hspace{0pt}element subsets can be chosen from an $n$\nobreakdash-\hspace{0pt}element set is given by the binomial coefficient:
+%
 \begin{equation}
     ^nC_k = \binom{n}{k} = \frac{n!}{k!(n-k)!}
 \end{equation}
+%
 read as `$n$ choose $k$'. Note that binomial coefficients can be found in the Pascal's triangle.
 
 \underline{Justification}: partial permutations in which the order of the sequence is disregarded and hence their number is reduced by the number of permutations of this sequence, $k!$:
+%
 \begin{equation}
         ^nC_k = \frac{^nP_k}{^kP}
 \end{equation}
 
 Symmetry relationship:
+%
 \begin{equation}
     \label{eq:symrel}
     \binom{n}{k} = \binom{n}{n-k}, \qquad 0 \le k \le n
 \end{equation}
 
 The number of all combinations which can be formed from a set with $n$ elements:
+%
 \begin{equation}
     \binom{n}{0} + \binom{n}{1} + \dotsb + \binom{n}{n}= \sum_{k=0}^{k} \binom{n}{k}
 \end{equation}
-Using the binomial expansion (Eq.~\ref{eq:binexp}) for $x=y=1$ gives $2^k$.
+%
+using the binomial expansion (Eq.~\ref{eq:binexp}) for $x=y=1$ gives $2^k$.
 
 \subsubsection{Aside: binomial expansion}
 
@@ -161,10 +176,13 @@ The number of possible combinations equals the number of multiset permutations (
 The total length of the notation equals $n-1+k$.
 Scoops appear $k$ times and shifts $n-1$ times.
 The formula for the number of such multiset permutations can be rearranged to a binomial coefficient, namely `$n-1+k$ choose $k$':
+%
 \begin{equation}
     \frac{(k+n-1)!}{(n-1)!k!} = \frac{(k+n-1)!}{(k+n-1-k)!k!} = \binom{n-1+k}{k},
 \end{equation}
+%
 which is sometimes denoted as:
+%
 \begin{equation*}
     \left(\!\!\!\binom{n}{k}\!\!\!\right)
 \end{equation*}
