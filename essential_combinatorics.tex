@@ -120,8 +120,8 @@ Each element of the sequence is independent: $n\times n\times \dotsb$
 \foreignlanguage{polish}{\pl permutacje z powtórzeniami.
 Należy zauważyć, że określenie `z powtórzeniami' wynika z powtórzeń w początkowym multizbiorze, a nie wielokrotnego (powtórnego) używania danych elementów, tak jak ma to miejsce w wariacjach z powtórzeniami i kombinacjach z powtórzeniami.}
 
-Permutation of a multiset (a set in which certain elements are repeated and have multiplicities $m_1, m_2, \dotsc$).
-An example of such a permutation is an anagram of a word in which certain letters are repeated.
+A multiset is a set in which certain elements are repeated and have multiplicities $m_1, m_2, \dotsc$.
+An example of a multiset permutation is an anagram of a word in which certain letters are repeated.
 The total number of such permutations is given by the multinomial coefficient (\cf binomial coefficient in Section~\ref{combinations})
 %
 \begin{equation}
@@ -148,7 +148,8 @@ The number of ways in which $k$\nobreakdash-\hspace{0pt}element subsets can be c
     ^nC_k = \binom{n}{k} = \frac{n!}{k!(n-k)!}
 \end{equation}
 %
-read as `$n$ choose $k$'. Note that binomial coefficients can be found from Pascal's triangle.
+read as `$n$ choose $k$'.
+Note that binomial coefficients can be found from Pascal's triangle.
 
 \underline{Justification}:
 Combinations are partial permutations in which the order of the sequence is disregarded and hence their number is reduced by the number of permutations of this sequence, $k!$:
