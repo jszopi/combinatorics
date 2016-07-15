@@ -53,8 +53,8 @@ A permutation maps a set or multiset (a set in which some elements are repeated)
 
 \begin{otherlanguage}{polish}
     \pl
-    W języku polskim, termin `permutacja' tyczy się tylko przekształceń zbioru lub multizbioru na ciąg o tej samej ilości elementów.
-    W przypadku różniącej się ilości elementów używa się terminu `wariacja'.
+    W języku polskim, termin `permutacja' tyczy się tylko przekształceń zbioru lub multizbioru na ciąg, w którym każdy elemnt pojawia się tyle samo razy co w początkowym zbiorze lub multizbiorze.
+    W pozostałych przypadkach używa się terminu `wariacja'.
 \end{otherlanguage}
 
 \subsection{Permutations}
@@ -83,7 +83,8 @@ The number of such permutation is thus reduced by the factor of $n$ giving ${(n-
 
 \subsection{Partial permutations}
 
-\foreignlanguage{polish}{\pl wariacje bez powtórzeń.}
+\foreignlanguage{polish}{\pl wariacje bez powtórzeń.
+Permutacja bez powtórzeń jest szczególnym przypadkiem wariacji bez powtórzeń dla $n=k$.}
 
 A partial permutation (sometimes called a `variation') is a shorter sequence of length $k$.
 The number of all possible $k$\nobreakdash-\hspace{0pt}permutations of $n$ is:
@@ -116,7 +117,8 @@ Each element of the sequence is independent: $n\times n\times \dotsb$
 \subsection{Multiset permutations}
 \label{mulper}
 
-\foreignlanguage{polish}{\pl permutacje z powtórzeniami.}
+\foreignlanguage{polish}{\pl permutacje z powtórzeniami.
+Należy zauważyć, że określenie `z powtórzeniami' wynika z powtórzeń w początkowym multizbiorze, a nie wielokrotnego (powtórnego) używania danych elementów, tak jak ma to miejsce w wariacjach z powtórzeniami i kombinacjach z powtórzeniami.}
 
 Permutation of a multiset (a set in which certain elements are repeated and have multiplicities $m_1, m_2, \dotsc$).
 An example of such a permutation is an anagram of a word in which certain letters are repeated.
