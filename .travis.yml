@@ -3,6 +3,7 @@ before_install:
 script:
 - mkdir _build
 - pdflatex -output-directory _build essential_combinatorics.tex
+- pdflatex -output-directory _build essential_combinatorics.tex
 deploy:
   provider: releases
   api_key:
