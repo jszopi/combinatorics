@@ -14,3 +14,16 @@ Another useful resource should be the table in the next section.
 | Python (`itertools`) | `permutations (S)` | `permutations (S, k)` | `product(S, repeat=k)`        | inefficient: `set(permutations(S))` efficient: [ekg/multipermute][1] | `combinations (S, k)` | `combinations_with_replacement (S, k)` |
 
 [1]: https://github.com/ekg/multipermute
+
+# Contributing
+
+All pull requests are very welcome.
+
+## Document
+
+The document is intentionally concise but if this has been at the cost of clarity, any improvements will be highly appreciated.
+
+## Implementations table
+
+Please add more programming languages!
+R, MATLAB and Mathematica are highly desirable.
