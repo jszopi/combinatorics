@@ -1,0 +1,15 @@
+before_install:
+- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
+script:
+- mkdir _build
+- pdflatex -output-directory _build tex/essential_combinatorics.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: FeRdeNlYAEx8i1e6d0Rbgw9AAIirf7Kai3viKhOKOZn3smC0ZsN13OWVCoU9o3k1cggYeR4WYuUOYGqUOPy/GqmrBcLmDNLwhmlL/hdfSOS3FeJ/21otL7llhU0HfBXp5KfksQWo6nODaUhcqDM68bPver5JsVwutxUpUhHhjMY7y60ughsAMSc0/gGTF7YgaxhQUqScnKAsStKyvjRYmtBZ1LPH+nV8Hyb894aaLsdwJtoGlac2jOJXNM+WzP5HfxeZCJkiUfgcGAP2TPCoyZU6p2pL3ttqWSELkD+7E71i4mDts5ViEiEQxxlf/mSX/hz079m/JKWfLb6JWg3Q0N++RpYUiiRD73ORo3gd1W9OrgL5YlXdQoNdhwcZiP/JEQthoII5zwJoWtATnZDP/WPXAebnONi3Lv53QafjPHxF3S4WvBta6IZd9pI/2PZyMDE0TLuZgM9j1xgveP+7vcw2tF8WIujuWMATWNt9/uQ9Bhmb3tFAjM9c/mtIKxkjYv1hUQLc8sj5Qmqyk/e4TC0Jb9/QbRJlEJX7JP3Ax9eKHWnt0bj3MFIBDXGNTVnNV69qqtPcJdXztNbwCSEsAyTkBI/uZLYxgZEVUyLQYCzvW5iQiqmiSiko4IUQ9gxJGvVjrqpjfrale1Ow3el4IUC1ZBYtSH/Q+xlF1CKJTb8=
+  file:
+  - _build/essential_combinatorics.pdf
+  skip_cleanup: true
+  on:
+    repo: jszopi/combinatorics
+    tags: true
