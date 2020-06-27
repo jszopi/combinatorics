@@ -1,5 +1,5 @@
 [![license](https://img.shields.io/badge/license-CC_BY--SA-blue.svg?style=flat)](https://creativecommons.org/licenses/by-sa/4.0/)
-[![Build Status](https://travis-ci.org/jszopi/combinatorics.svg?branch=master)](https://travis-ci.org/jszopi/combinatorics)
+[![Build Status](https://travis-ci.com/jszopi/combinatorics.svg?branch=master)](https://travis-ci.com/jszopi/combinatorics)
 
 The highlight of this repo is the LaTeX document, which outlines the most important concepts in combinatorics.
 It also includes Polish names for the discussed operations and attempts to make sense of such dissimilar terminology.
